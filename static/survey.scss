@@ -1,0 +1,33 @@
+body{
+  font-family: "Arial", sans-serif;
+}
+.title{
+  text-align: center;
+  color: forestgreen;
+  font-weight: bold;
+  margin-bottom: 30px;  
+}
+.description{
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+form{
+  margin: 30px 0;
+  padding: 10px;
+  border: 1px solid #333;
+  label{
+    display: block;
+    margin-top: 20px;
+  }
+  input[type="submit"]{
+    display: block;
+    margin-top: 20px;
+  }
+  input[maxlength="2000"]{
+    width: 100%;
+  }
+  .errorlist{
+    color: red;
+  }
+}

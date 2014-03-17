@@ -1,0 +1,22 @@
+<html>
+<head>
+  <link rel="stylesheet" href="/static/survey.css">
+</head>
+<body>
+  <div class="title">
+  {% block page_title %}
+  {% endblock %}
+  </div>
+
+  <div class="description">
+  {% block page_description %}
+  {% endblock %}
+  </div>
+
+  <form method=POST>
+    {% csrf_token %}
+    {{ display_form }}
+    <input type="submit" value="Submit" />
+  </form>
+</body>
+</html>

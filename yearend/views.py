@@ -41,8 +41,11 @@ def page2(request):
         # An unbound form, except for the rest of the model
         form = forms.ChildIntialForm(instance=child)
 
-    context = {'display_form': form}
-    return render(request, 'yearend/page1.html', context)
+    context = {
+        'display_form': form,
+        'child_index': request.GET['c'],
+    }
+    return render(request, 'yearend/page2.html', context)
 
 
 def page3(request):
@@ -59,8 +62,11 @@ def page3(request):
         # An unbound form, except for the rest of the model
         form = forms.ChildUsefulForm(instance=child)
 
-    context = {'display_form': form}
-    return render(request, 'yearend/page1.html', context)
+    context = {
+        'display_form': form,
+        'child_index': request.GET['c'],
+    }
+    return render(request, 'yearend/page3.html', context)
 
 
 def page4(request):
@@ -77,8 +83,11 @@ def page4(request):
         # An unbound form, except for the rest of the model
         form = forms.ChildFollowForm(instance=child)
 
-    context = {'display_form': form}
-    return render(request, 'yearend/page1.html', context)
+    context = {
+        'display_form': form,
+        'child_index': request.GET['c'],
+    }
+    return render(request, 'yearend/page4.html', context)
 
 
 def page5(request):
@@ -100,8 +109,11 @@ def page5(request):
         # An unbound form, except for the rest of the model
         form = forms.ChildCloseForm(instance=child)
 
-    context = {'display_form': form}
-    return render(request, 'yearend/page1.html', context)
+    context = {
+        'display_form': form,
+        'child_index': request.GET['c'],
+    }
+    return render(request, 'yearend/page5.html', context)
 
 def page6(request):
     family = _get_family(request.session.session_key)
@@ -117,7 +129,7 @@ def page6(request):
         form = forms.FamilyCloseForm(instance=family)
 
     context = {'display_form': form}
-    return render(request, 'yearend/page1.html', context)
+    return render(request, 'yearend/page6.html', context)
 
 def thanks(request):
     return render(request, 'yearend/thanks.html', {})

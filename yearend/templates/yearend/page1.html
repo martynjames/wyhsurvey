@@ -1,5 +1,9 @@
-<form method=POST>
-  {% csrf_token %}
-  {{ display_form }}
-  <input type="submit" value="Submit" />
-</form>
+{% extends "yearend/main_page.html" %}
+
+{% block page_title %}
+WYH Season Ending Survey
+{% endblock %}
+
+{% block page_description %}
+Thanks for taking the time to complete this survey, we'll ask you specific questions about each child that you have in the program, but to retain anonymity we simply refer to them as Child #1, Child #2 etc.
+{% endblock %}
