@@ -2,7 +2,7 @@ from django import forms
 from models import FamilyResponse, ChildResponse
 
 class FamilyOverviewForm(forms.ModelForm):
-    how_many_children = forms.IntegerField(min_value=1)
+    how_many_children = forms.IntegerField(min_value=1, label="How many children did you have in Westwood Youth Hockey this season?")
     class Meta:
         model = FamilyResponse
         fields = ['overall_experience', 'how_many_children']
