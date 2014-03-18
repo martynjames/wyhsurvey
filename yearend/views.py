@@ -8,6 +8,9 @@ from models import FamilyResponse, ChildResponse
 
 
 def page1(request):
+    if not request.session.get('has_session'):
+        request.session['has_session'] = True
+
     family = _get_family(request.session.session_key)
     if request.method == 'POST':  # If the form has been submitted...
         # A form bound to the POST data
